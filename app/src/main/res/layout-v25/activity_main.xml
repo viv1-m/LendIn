@@ -61,12 +61,11 @@
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingTop="6dp"
+        android:layout_marginTop="8dp"
         android:stretchColumns="1"
         app:layout_constraintTop_toBottomOf="@+id/current_balance"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints">
 
         <TableRow>
 
