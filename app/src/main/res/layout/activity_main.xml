@@ -54,19 +54,46 @@
         app:backgroundTint="?android:attr/colorSecondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/list"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="368dp"
-        android:layout_height="295dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/current_balance" />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:stretchColumns="1"
+        app:layout_constraintTop_toBottomOf="@+id/current_balance"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints">
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="Abcddhi"
+                android:textSize="36sp" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Efgh"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="IJKL"
+                android:textSize="30sp" />
+
+            <TextView
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="MNOP"
+                android:textSize="30sp" />
+        </TableRow>
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>
