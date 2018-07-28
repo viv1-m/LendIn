@@ -54,7 +54,7 @@
         app:backgroundTint="?android:attr/colorSecondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@android:drawable/ic_menu_add" tools:targetApi="n_mr1"/>
 
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
