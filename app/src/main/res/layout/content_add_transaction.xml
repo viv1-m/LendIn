@@ -55,7 +55,7 @@
         tools:layout_editor_absoluteX="37dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/amount"
         android:layout_width="174dp"
         android:layout_height="31dp"
         android:hint="Enter Amount Here"
@@ -83,5 +83,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.08" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="136dp"
+        android:layout_height="57dp"
+        android:text="add"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
