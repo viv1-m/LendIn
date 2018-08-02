@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "278119391955",
+    "firebase_url": "https://lendin-1711.firebaseio.com",
+    "project_id": "lendin-1711",
+    "storage_bucket": "lendin-1711.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278119391955:android:b3dc1e8c1b0c2b48",
+        "android_client_info": {
+          "package_name": "com.example.dinesh.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278119391955-ac9ki8c5egnv19kj9l0efi7ajqren34d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1BbHwL9xSgJffbMLEJ938ON3ppyS1LaY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
