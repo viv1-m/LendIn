@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         users.add("");
     }*/
 
-    ArrayList<String> mylist = new ArrayList<String>();
+    /*ArrayList<String> mylist = new ArrayList<String>();
 
     public void setMylist(ArrayList<String> mylist) {
         this.mylist = mylist;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         mylist.add("Sankalp");
         mylist.add("Gourav");
     }
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-*/
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,10 +63,11 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, mylist);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-*/
+
         ArrayAdapter<ArrayList<String>> adapter= new ArrayAdapter<ArrayList<String>>(this,android.R.layout.simple_spinner_item, Collections.singletonList(mylist));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
+    }*/
     }
 }

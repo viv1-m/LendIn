@@ -71,7 +71,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                             if (task.isSuccessful()){
                                 Toast.makeText(Register.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
 
-                                Intent mainA = new Intent(Register.this, Add_transaction.class);
+                                Intent mainA = new Intent(Register.this, MainActivity.class);
                                 startActivity(mainA);
                             }
                             else{
