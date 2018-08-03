@@ -6,4 +6,6 @@
     <color name="gray">#DCD1CE </color>
     <color name="black">#000000</color>
     <color name = "blue">#00F</color>
+    <color name="light_blue">#adf</color>
+    <color name="dark_blue">#009</color>
 </resources>

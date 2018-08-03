@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true"
+    android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".Register">
 
@@ -15,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Enter your Email"
+        android:textSize="25dp"
         android:inputType="textEmailAddress"
         android:textAlignment="center" />
 
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Enter Your Password"
+        android:textSize="25dp"
         android:inputType="textPassword"
         android:textAlignment="center" />
 
@@ -31,19 +34,21 @@
         android:id="@+id/Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:layout_gravity="center"
         android:text="Register" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         android:layout_margin="20dp"
         android:id="@+id/signin"
-        android:background="@drawable/cell_shape"
+        android:background="@drawable/link"
         android:gravity="center"
         android:text="Already Registered? Sign In here"
         android:textColor="@color/blue"
-        android:textSize="15dp" />
+        android:textSize="18dp" />
 
 
 </LinearLayout>
