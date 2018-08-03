@@ -36,7 +36,7 @@ public class Add_transaction extends AppCompatActivity {
                         String amount = amt.getText().toString();
                         int amt= Integer.parseInt(amount);
                         String name = spinner.getSelectedItem().toString();
-                        Intent added = new Intent(this, MainActivity.class);
+                        Intent added = new Intent(Add_transaction.this, MainActivity.class);
                         added.putExtra("amount", amt);
                         added.putExtra("name", name);
                         startActivity(added);
