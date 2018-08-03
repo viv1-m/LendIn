@@ -51,14 +51,12 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         String password = editTextPassword.getText().toString().trim();
 
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(this , "Enter valid Email", Toast.LENGTH_SHORT);
-            Toast.show();
+            Toast.makeText(this , "Enter valid Email", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if(TextUtils.isEmpty(password)){
-            Toast.makeText(this , "Enter your password", Toast.LENGTH_SHORT);
-            Toast.show();
+            Toast.makeText(this , "Enter your password", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -73,14 +71,15 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                             if (task.isSuccessful()){
                                 Toast.makeText(Register.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
 
-                                Intent mainA = new Intent(Register.this, MainActivity.class);
+                                Intent mainA = new Intent(Register.this, Add_transaction.class);
                                 startActivity(mainA);
                             }
                             else{
                                 Toast.makeText(Register.this, "Not Successful", Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
                             }
                         }
-                    })
+                    });
 
         }
 
