@@ -18,10 +18,10 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="175dp"
+        style="?android:attr/spinnerItemStyle"
+        android:layout_width="190dp"
         android:layout_height="36dp"
         android:background="@drawable/back"
-        style="?android:attr/spinnerItemStyle"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,9 +55,10 @@
         tools:layout_editor_absoluteX="37dp" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="174dp"
-        android:layout_height="31dp"
+        android:id="@+id/amount"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:background="@drawable/cell_shape"
         android:hint="Enter Amount Here"
         android:text=""
         android:textColor="@color/black"
@@ -65,7 +66,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.289"
-        tools:layout_editor_absoluteX="175dp" />
+        tools:layout_editor_absoluteX="159dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -83,5 +84,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.08" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="136dp"
+        android:layout_height="57dp"
+        android:text="add"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
