@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,31 +17,43 @@ import java.util.Collections;
 public class MainActivity extends AppCompatActivity {
 
 
-    //public String[] users = new String[]();
+    TableLayout tableLayout;
 
-/*    public void addUser (String[] users){
-        users.add("");
-    }*/
-
-    /*ArrayList<String> mylist = new ArrayList<String>();
-
-    public void setMylist(ArrayList<String> mylist) {
-        this.mylist = mylist;
-        mylist.add("Vivek");
-        mylist.add("Vidit");
-        mylist.add("Rahul");
-        mylist.add("Himani");
-        mylist.add("Deepak");
-        mylist.add("Sankalp");
-        mylist.add("Gourav");
-    }
-*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        tableLayout = (TableLayout) findViewById(R.id.tableTrans);
+
+        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        String newString;
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                newString= null;
+            } else {
+                newString= extras.getString("amount");
+                int amount = Integer.parseInt(newString);
+                TableRow addRow= new TableRow(this);
+                TextView amt = new TextView(this);
+                amt.setText(amount);
+                tableLayout.addView(addRow);
+                addRow.addView(amt);
+
+            }
+        } else {
+            newString= (String) savedInstanceState.getSerializable("amount");
+            int amount = Integer.parseInt(newString);
+            TableRow addRow= new TableRow(this);
+            TextView amt = new TextView(this);
+            amt.setText(amount);
+            tableLayout.addView(addRow);
+            addRow.addView(amt);
+        }
+
+
         /*fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,18 +61,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        Spinner spinner = findViewById(R.id.spinner);
-
-        setMylist(mylist);
+        */
+       // Spinner spinner = findViewById(R.id.spinner);
 
         /*ArrayAdapter<ArrayList<String>> adapter = new ArrayAdapter<ArrayList<String>>(this,
                 android.R.layout.simple_spinner_item, mylist);
