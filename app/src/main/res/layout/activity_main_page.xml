@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main_page">
 
     <TextView
         android:id="@+id/textView"
@@ -20,7 +20,6 @@
         android:textColorHighlight="@android:color/holo_blue_dark"
         android:textSize="30sp" />
 
-    :
 
     <View
         android:layout_width="match_parent"
@@ -34,7 +33,6 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/current_balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
@@ -45,6 +43,7 @@
             android:textSize="25sp" />
 
         <EditText
+            android:id="@+id/balance"
             android:layout_weight="1"
             android:hint="Your Debit/Credit"
             android:background="@drawable/back"

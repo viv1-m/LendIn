@@ -101,9 +101,6 @@
         android:text="add"
         android:textSize="15dp"
         android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:onClick="mainActButton" />
 
 </LinearLayout>

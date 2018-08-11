@@ -18,6 +18,15 @@ public class Add_transaction extends AppCompatActivity {
     Spinner spinner;
     Button button;
 
+    public void mainActButton(View view){
+        // String amount = amt.getText().toString();
+        //int amt= Integer.parseInt(amount);
+        //String name = spinner.getSelectedItem().toString();
+        Intent added = new Intent(Add_transaction.this, main_page.class);
+        //  added.putExtra("amount", amount);
+        startActivity(added);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,19 +38,7 @@ public class Add_transaction extends AppCompatActivity {
         spinner = (Spinner) findViewById(R.id.spinner);
         button = (Button)findViewById(R.id.add);
 
-        button.setOnClickListener(
-                new View.OnClickListener()
-                {
-                    public void onClick(View view)
-                    {
-                        String amount = amt.getText().toString();
-                        //int amt= Integer.parseInt(amount);
-                        String name = spinner.getSelectedItem().toString();
-                        Intent added = new Intent(Add_transaction.this, MainActivity.class);
-                        added.putExtra("amount", amount);
-                        startActivity(added);
-                    }
-                });
+
+                }
     }
 
-}
