@@ -14,6 +14,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AnimatedViewPager pager= findViewById(R.id.pager);
+        AnimatedViewPager pager= ButterKnife.findById(this,R.id.pager);
         pager.setAdapter(new AuthAdapter(getSupportFragmentManager(),pager));
 
         tableLayout = (TableLayout) findViewById(R.id.tableTrans);

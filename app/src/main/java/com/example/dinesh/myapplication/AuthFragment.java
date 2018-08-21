@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import butterknife.BindView;
+
 public abstract class AuthFragment extends Fragment {
     @BindView(R.id.controller)
     protected TextView controller;
