@@ -14,6 +14,7 @@ import android.widget.Scroller;
 import java.lang.reflect.Field;
 
 public class AnimatedViewPager extends ViewPager{
+    //New File
 
     private int duration;
     public AnimatedViewPager(@NonNull Context context) {
