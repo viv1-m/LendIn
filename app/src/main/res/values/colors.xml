@@ -8,4 +8,5 @@
     <color name = "blue">#00F</color>
     <color name="light_blue">#adf</color>
     <color name="dark_blue">#009</color>
+    <color name="dark_gray">#555</color>
 </resources>

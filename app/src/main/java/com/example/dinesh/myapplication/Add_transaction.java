@@ -8,12 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 public class Add_transaction extends AppCompatActivity {
 
-    TextView amt;
+    EditText amt;
     Spinner spinner;
     Button button;
 
@@ -24,7 +25,7 @@ public class Add_transaction extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        amt = (TextView) findViewById(R.id.amount);
+        amt = (EditText) findViewById(R.id.amount);
         spinner = (Spinner) findViewById(R.id.spinner);
         button = (Button)findViewById(R.id.add);
 
@@ -34,11 +35,10 @@ public class Add_transaction extends AppCompatActivity {
                     public void onClick(View view)
                     {
                         String amount = amt.getText().toString();
-                        int amt= Integer.parseInt(amount);
+                        //int amt= Integer.parseInt(amount);
                         String name = spinner.getSelectedItem().toString();
                         Intent added = new Intent(Add_transaction.this, MainActivity.class);
-                        added.putExtra("amount", amt);
-                        added.putExtra("name", name);
+                        added.putExtra("amount", amount);
                         startActivity(added);
                     }
                 });
