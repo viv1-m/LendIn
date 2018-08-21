@@ -22,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home_login);
+        AnimatedViewPager pager= findViewById(R.id.pager);
+        pager.setAdapter(new AuthAdapter(getSupportFragmentManager(),pager));
 
         tableLayout = (TableLayout) findViewById(R.id.tableTrans);
 
