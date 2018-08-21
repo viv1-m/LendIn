@@ -14,9 +14,12 @@ import android.widget.TextView;
 
 public class Add_transaction extends AppCompatActivity {
 
+    //Old file
+
     EditText amt;
     Spinner spinner;
     Button button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
