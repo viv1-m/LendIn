@@ -93,7 +93,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         }
 
         if(view == textViewSignin){
-            Intent login = new Intent(Register.this, Login_Activity.class);
+            Intent login = new Intent(Register.this, LoginActivity.class);
             startActivity(login);
         }
     }
