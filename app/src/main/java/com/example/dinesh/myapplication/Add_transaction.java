@@ -6,21 +6,33 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
-import sun.rmi.runtime.Log;
 
 public class Add_transaction extends AppCompatActivity {
+
+    //Old file
 
     EditText amt;
     Spinner spinner;
     Button button;
+
 
     ArrayList<String> names = new ArrayList<String>();
 
@@ -33,6 +45,7 @@ public class Add_transaction extends AppCompatActivity {
     FirebaseUser user = mAuth.getCurrentUser();
 
     String uid = user.getUid();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,22 +71,28 @@ public class Add_transaction extends AppCompatActivity {
                         startActivity(added);
                     }
                 });
+
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                Log.d("TAG", "User name is " + (String) dataSnapshot.child("FN6sV61ej6gN4eYn3cQkmbhzrP93").child("name").getValue());
+
+            }
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("TAG", "Failed to read value.", error.toException());
+            }
+        });
     }
 
-    myRef.addValueEventListener(new ValueEventListener() {
-        @Override
-        public void onDataChange(DataSnapshot dataSnapshot) {
-            // This method is called once with the initial value and again
-            // whenever data at this location is updated.
-            Log.d("TAG", "User name is " + (String) dataSnapshot.child("FN6sV61ej6gN4eYn3cQkmbhzrP93").child("name").getValue());
 
-        }
 
-        @Override
-        public void onCancelled(DatabaseError error) {
-            // Failed to read value
-            Log.w("TAG", "Failed to read value.", error.toException());
-        }
-    });
+
 
 }
+
+
